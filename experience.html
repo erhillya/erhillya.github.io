@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Emily in Busan :: Share Your Experience</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Share your experience with Emily in Busan: tell us who you are and what appeals to you about Busan's food and attractions.">
+        <link rel="stylesheet" href="busan.css">
+    </head>
+    <body>
+        <header>
+            <h1><a href="index.html">Emily in Busan</a></h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="food.html">Food</a></li>
+                <li><a href="attractions.html">Attractions</a></li>
+                <li><a href="experience.html">Share Your Experience</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <h2>Share Your Experience</h2>
+            <p>
+                If you've made it this far, thank you for reading! I would truly appreciate you 
+                taking a moment to fill out the form below. I know it doesn't offer much in return, 
+                but as someone who loves both travel and data, hearing about who is reading and 
+                what appeals to them means a lot to me.
+            </p>
+
+            <section class="form-section">
+                <form action="#">
+
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" name="age" placeholder="Your age" min="1" max="120">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="occupation">Major / Occupation</label>
+                        <input type="text" id="occupation" name="occupation" placeholder="e.g. Mathematics, Software Engineer">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="visited">Have you visited Busan?</label>
+                        <select id="visited" name="visited">
+                            <option value="">-- Select an option --</option>
+                            <option value="yes">Yes, I have visited Busan</option>
+                            <option value="no">No, but I would like to</option>
+                            <option value="nointerest">No, and I am not planning to</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="food-pick">Favorite Food Recommendation</label>
+                        <select id="food-pick" name="food-pick">
+                            <option value="">-- Select a recommendation --</option>
+                            <option value="nampo">남포동 길거리 음식 · Nampo-dong Street Food</option>
+                            <option value="milmyeon">사철밀면 · Sacheol Milmyeon</option>
+                            <option value="simya">심야식당구미 · Simya Sikdang Gumi</option>
+                            <option value="kkeuti">끄티집 광안리 · Kkeutijip Gwangalli</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="attraction-pick">Favorite Attraction</label>
+                        <select id="attraction-pick" name="attraction-pick">
+                            <option value="">-- Select an attraction --</option>
+                            <option value="gamcheon">감천문화마을 · Gamcheon Culture Village</option>
+                            <option value="haeundae">해운대해수욕장 · Haeundae Beach</option>
+                            <option value="gwangalli">광안리 해수욕장 · Gwangalli Beach</option>
+                            <option value="nampo">남포동 · Nampo-dong</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Share Your Experience</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Have you been to Busan? Share your own experience, recommendations, or thoughts!"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" value="Submit">
+                    </div>
+
+                </form>
+            </section>
+        </main>
+        <footer>
+            Copyright &copy; Emily Hillyard<br>
+            <a href="mailto:emily.hillyard9@gmail.com">emily.hillyard9@gmail.com</a>
+        </footer>
+    </body>
+</html>

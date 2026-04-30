@@ -1,12 +1,10 @@
-* {
-       border-radius: 14px;
-}
 :root {
        --text: #0d070e;
        --background: #f9f4f9;
        --primary: #f9d0fb;
        --secondary: #d0a5ba;
        --accent: #bf869a;
+       --white: #FFFFFF;
 }
 body { 
        background-color: var(--background);
@@ -16,7 +14,7 @@ body {
 }
 header {
        background-color: var(--secondary);
-       color: #FFFFFF;
+       color: var(--white);
        text-align: center;
        font-weight: normal;
 }
@@ -24,10 +22,10 @@ header a {
        text-decoration: none;
 }
 header a:link {
-       color: #FFFFFF;
+       color: var(--white);
 }
 header a:visited {
-       color: #FFFFFF;
+       color: var(--white);
 }
 header a:hover {
        color: var(--accent);
@@ -40,21 +38,26 @@ h1 {
        letter-spacing: 0.25em;
        font-family: Georgia, serif;
        font-weight: bold;
+       font-size: 2.5em;
+
 }
 nav {
        font-weight: 500;
        padding: 0;
-       font-size: 120%;
+       font-size: 140%;
        text-align: center;
 }
 nav li {
-       border-bottom: 1px solid #000033;
+       border-bottom: none;
+       padding: 0.5em 1.5em;
 }
 nav ul {
        list-style-type: none;
        margin: 0;
        padding-left: 0;
        font-size: 1.2em;
+       display: flex;
+       justify-content: center;
 }
 nav a:link {
        color: var(--text);
@@ -68,8 +71,9 @@ nav a:hover {
 nav a {
        text-decoration: none;
 }
+
 main {
-       background-color: #FFFFFF;
+       background-color: var(--white);
        padding: 1px 20px 20px 30px;
        display: block;
        overflow: auto;
@@ -103,7 +107,7 @@ footer {
        padding: 2em;
        font-family: 'Trebuchet MS', sans-serif;
        background-color: var(--secondary);
-       color: #FFFFFF;
+       color: var(--white);
 }
 .about-me {
        display: flow-root; 
@@ -114,11 +118,15 @@ footer {
        width: 150px;
        height: 150px;
        margin-right: 20px;
+       border-radius: 50%;
 }
+
+/* Cards styles */
 .cards-section {
        text-align: center;
        padding: 60px 20px;
        background-color: var(--background);
+       border-radius: 16px;
 }
 .cards section h3 {
        text-align: center;
@@ -131,16 +139,16 @@ footer {
        flex-direction: row;
 }
 .card {
-       background-color: #FFFFFF;
+       background-color: var(--white);
        border-radius: 16px;
        padding: 30px 20px;
        width: 280px;
        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
-/* Add effect for hover over cards */
 .card-image {
        width: 100%;
        object-fit: cover;
+       border-radius: 10px;
 }
 .card h3 {
        font-family: 'Trebuchet MS', sans-serif;
@@ -149,6 +157,7 @@ footer {
        margin-bottom: 10px;
 }
 
+/* Content page entry layout */
 .entry {
        display: flow-root;
        padding: 30px 10px;
@@ -192,7 +201,13 @@ footer {
        color: var(--secondary);
        border-bottom-color: var(--secondary);
 }
+.entry-full {
+       float: none;
+       width: 100%;
+       padding-right: 0;
+}
 
+/* ── Photo gallery (from class) ── */
 .gallery {
        display: flex;
        flex-wrap: wrap;
@@ -247,7 +262,7 @@ figcaption {
 }
 .attractions-table th {
        background-color: var(--secondary);
-       color: #FFFFFF;
+       color: var(--white);
        padding: 12px 16px;
        text-align: left;
        font-family: 'Trebuchet MS', sans-serif;
@@ -267,5 +282,59 @@ figcaption {
        height: 300px;
        background-image: url(gamcheon.jpg);
        background-repeat: no-repeat;
-       background-size: 100% 100%;
+       background-size: cover;
+       border-radius: 0;
+       background-position: 50% 50%;
+}
+
+/* Form styles */
+.form-section {
+       max-width: 600px;
+       padding: 20px 0;
+}
+.form-group {
+       margin-bottom: 20px;
+}
+.form-group label {
+       display: block;
+       font-family: Georgia, serif;
+       font-weight: 600;
+       color: var(--accent);
+       margin-bottom: 6px;
+}
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="number"],
+.form-group select,
+.form-group textarea {
+       width: 100%;
+       padding: 10px 14px;
+       border: 1px solid var(--secondary);
+       border-radius: 8px;
+       font-family: 'Trebuchet MS', sans-serif;
+       font-size: 1em;
+       color: var(--text);
+       background-color: var(--background);
+       box-sizing: border-box;
+}
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="number"]:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+       outline: none;
+       border-color: var(--accent);
+}
+.form-group input[type="submit"] {
+       background-color: var(--secondary);
+       color: var(--white);
+       border: none;
+       padding: 12px 30px;
+       font-family: 'Trebuchet MS', sans-serif;
+       font-size: 1em;
+       border-radius: 8px;
+       cursor: pointer;
+}
+.form-group input[type="submit"]:hover {
+       background-color: var(--accent);
 }
